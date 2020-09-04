@@ -1,0 +1,754 @@
+@font-face{
+    font-family: rounded-mt;
+    src: url('fonts/arial-rounded-mt.ttf');
+}
+@font-face{
+    font-family: aga-cairo;
+    src: url('fonts/AGA-Cairo-Regular.ttf');
+}
+/*AGA Cairo Regular*/
+/*Main Header */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body, html{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    z-index: -10;
+    scroll-behavior: smooth;
+    font-family: "aga-cairo", sans-serif;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: "rounded-mt", sans-serif;
+}
+a{
+    font-family: "rounded-mt";
+    color: #fff;
+    text-decoration: none;
+}
+.myHeader{
+    text-transform: uppercase;
+}
+.myLine{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ .myLine .line{
+    width: 250px;
+    height: 5px;
+    display: block;
+    background: #FB706D;
+    border-radius: 2px;
+}
+.myLine .box{
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    transform: rotate(45deg);
+    position: absolute;
+    display: block;
+    background: #FB706D
+}
+.logo h1{
+    font-size: 45px;
+    text-transform: uppercase;
+}
+.logo h1 span{
+    color: #C55956;
+}
+.main-header{
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    background: url('images/showcase-bg.png') no-repeat center center /cover;
+}
+.main-header .layout{
+     width: 100vw;
+     min-height: 100vh;
+    position: absolute;
+    z-index: 0;
+    background: #082147;
+    opacity: 0.92;
+    top: 0;
+    left: 0;
+}
+.txt-type > .txt{
+     border-right: 2px solid #fff;
+}
+.main-header .container{
+    width: 100vw;
+     min-height: 100vh;
+    color: #fff;
+    position: absolute;
+    margin-top: 20px;
+    padding: 20px 0;
+    z-index: 10;
+}
+.main-header .container nav{
+    padding: 15px 10%;
+    display: flex;
+    gap: 200px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 40;
+}
+.nav-white{
+    position: fixed;
+    top: 0;
+    background: #fff;
+    color: #fff;
+    width: 100vw;
+    padding-top: 20px ;
+    padding-bottom: 20px ;
+    color: #082147!important;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    z-index: 40;
+
+}
+.nav-white a{
+    color: #082147;
+}
+.main-header nav ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.main-header nav ul a{
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding-bottom: 5px;
+    position: relative;
+    transition: color 0.4s ease-in-out;
+}
+.main-header nav ul a::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #C55956;
+    color: #C55956;
+    transition: width 0.4s ease-in-out;
+}
+.main-header nav ul a:hover{
+    color: #C55956;
+}
+.main-header nav ul a:hover::after{
+    width: 100%;
+}
+.main-header .content{
+    padding-left: 10%;
+    margin-top: 200px;
+    width: 100%;
+}
+.main-header .content p{
+    max-width: 60%;
+    margin: 30px 0;
+    line-height: 1.6;
+}
+.main-header nav .menu{
+    display: none;
+}
+.main-header .content h1{
+    font-family: "rounded-mt", sans-serif;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+.main-header .content h1 span{
+    color: #C55956;
+}
+.main-header .content a.btn{
+    padding: 10px 20px;
+    background: none;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    outline: none;
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+}
+.main-header .content a.btn:hover{
+    background: #fff;
+    color: #082147;
+}
+.toggle-menu{
+    position: fixed;
+    z-index: 50;
+    background: #c55a56;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    width: 0px;
+    transition: width 0.3s ease-in-out;
+}
+.toggle-menu .close-btn{
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+     padding: 12px 30px;
+     padding-top: 20px;
+    
+}
+.toggle-menu ul{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    list-style: none;
+}
+.toggle-menu ul li{
+    width: 100%;
+    cursor: pointer;
+    border-bottom: 1px solid #fff;
+    padding: 20px 30px;
+    display: ;
+}
+.toggle-menu ul li:first-child{
+    border-top: 1px solid #fff;
+
+}
+.toggle-menu ul li:hover{
+    background: #082147;
+}
+.toggle-menu ul a{
+    font-size: 22px;
+    display: flex;
+    justify-content: flex-start;;
+    width: 100%;
+    height: 100%;
+}
+.toggle-menu ul a i{
+    margin-right:10px ;
+}
+/*About Section*/
+.about{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0 50px 0 ;
+}
+.about .container{
+    height: auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.about .myHeader{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 50px;
+}
+.about .myHeader h1{
+    text-transform: uppercase;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+.about .about-content .box{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.about .about-content .box .text{
+    border-left: 2px solid #FB706D;
+    padding-left: 30px;
+}
+.about  .img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about  .img img{
+    width: 400px;
+    border: 3px solid #082147;
+    
+}
+
+/*Skills section*/
+.skills{
+    width: 100%;
+    height: 70vh;
+    background: #082147;
+    color: #fff;
+    border: 1px solid #fff;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.skills .myHeader{
+    transform: rotate(-90deg);
+    height: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.skills .myHeader h1{
+    letter-spacing: 50px;
+    margin-bottom: 20px;
+}
+.skills .myHeader .myLine{
+    right:25px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skills .myHeader .line{
+    width: 90%;
+    top: 40px;
+}
+.skills .container{
+    width: 70vw;
+    left: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    position: absolute;
+}
+.skills .container .bar{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 20px;
+}
+.skills .container .bar .bar-content{
+    height: 100%;
+    background: #C55956;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 40px;
+    border-radius: 20px;
+}
+.skills .container .bar:first-child .bar-content{
+    width: 90%;
+}
+.skills .container .bar:nth-child(2) .bar-content{
+    width: 80%;
+}
+.skills .container .bar:nth-child(3) .bar-content{
+    width: 70%;
+}
+.skills .container .bar:nth-child(4) .bar-content{
+    width: 60%;
+}
+.skills .container .bar:nth-child(5) .bar-content{
+    width: 70%;
+}
+.skills .container .bar:nth-child(6) .bar-content{
+    width: 50%;
+}
+.skills .container .bar:nth-child(7) .bar-content{
+    width: 50%;
+}
+.skills .container .bar:last-child .bar-content{
+    width: 70%;
+}
+
+
+/*Portfolio*/
+.portfolio{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0 100px 0 ;
+}
+.portfolio .myHeader{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+.portfolio .myHeader h1{
+    margin-bottom: 15px;
+}
+.portfolio .container{
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.portfolio .container .project{
+    position: relative;
+}
+.project-layout{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #082147;
+    opacity: 0;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    transition: all 0.2s ease-in-out;
+}
+
+.project-title{
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #082147;
+    color: #fff;
+    z-index: 8;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+    overflow: hidden;
+    height: 0;
+    transition: all 0.2s ease-in-out;
+}
+.portfolio .container .project:hover .project-layout{
+    opacity: 0.5;
+}
+.portfolio .container .project:hover .project-title{
+    height: 20%;
+}
+
+.portfolio .container .project img{
+    width: 100%;
+}
+/*Conact Section*/
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #082147;
+}
+.contact .myHeader{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 100px auto;
+}
+.contact .myHeader h1{
+    margin-bottom: 20px;
+}
+.contact .form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.contact form input{
+    padding: 20px;
+    border-radius: 5px;
+    outline: none;
+    resize: none;
+    width: 80vw;
+    margin-bottom: 20px;
+}
+.text-area{
+     width: 80vw;
+     position: relative;
+ }
+.text-area textarea{
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    resize: vertical;
+    outline: none;
+ }
+  .status {
+      width: 80vw;
+      margin-top: 10px;
+    display: flex;
+     gap: 10px;
+     justify-content: flex-start;
+     align-items: center;
+  }
+ .status .success{
+     color: green;
+ }
+  .status .fail{
+     color: red;
+ }
+.contact form button{
+    background: #C55956;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    padding: 20px;
+    outline: none;
+    margin-top: 20px;
+}
+.contact form button:hover{
+    background: #a74b48;
+}
+/* Footer*/
+.footer{
+    width: 100vw;
+    padding: 50px 30px;
+    background: #082147;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer ul{
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.footer ul li{
+    padding-right: 20px;
+    padding-left: 20px;
+    border-right: 1px solid #fff;
+}
+.footer ul li:last-child{
+    border: none;
+}
+.footer ul li a{
+    transition: all 0.2s ease-in-out;
+}
+.footer ul li a:hover{
+    color: #C55956;
+}
+/*Media Queries*/
+
+@media(max-width: 1025px){
+    nav .nav-white{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .main-header .content{
+    padding: 0;
+    margin-top: 100px;
+    }
+    .about{
+        padding: 30px;
+    }
+    .about .container{
+    width: 80%;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    padding: 20px;
+}
+.main-header .content{
+    padding-left: 10%;
+    margin-top: 100px;q
+    width: 100%;
+}
+.about .container .img{
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.about .container .img img{
+    width: 100%;
+}
+.about .container .about-content .box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+}
+.about .container .about-content .box .text{
+    border: none;
+    padding: 0;
+}
+.portfolio .container{
+
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+    .skills .container{
+    grid-template-columns: 1fr;
+    }
+    .skills .myHeader {
+    height: 52%;
+}
+.main-header nav ul{
+        display: none;
+    }
+    .main-header nav .menu{
+    display: block;
+    cursor: pointer;
+    }
+}
+
+@media(max-width: 765px){
+    .main-header nav ul{
+        display: none;
+    }
+    .main-header nav .menu{
+    display: block;
+    cursor: pointer;
+    }
+    .main-header .container nav{
+    gap: 50px;
+    }
+    .logo h1{
+    font-size: 25px;
+    }
+    .main-header .content{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    margin-top: 50px;
+}
+.main-header .content h1{
+    font-size: 22px;
+}
+.main-header .content p{
+    max-width: 80%;
+    margin: 30px 0;
+    padding: 0;
+}
+.skills{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-top: 20px;
+}
+.skills .myHeader{
+    width: 80%;
+    transform: rotate(0deg);
+    height: 100%;
+    margin: 0;
+    position: relative;
+    height: auto;
+    left: 0;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.portfolio{
+    padding: 10px;
+}
+.portfolio .myHeader{
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.portfolio .myHeader h1{
+    margin-bottom: 20px;
+}
+.skills .myHeader h1{
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.skills .myHeader .myLine{
+    right:0 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skills .myHeader .line{
+    width: 90%;
+    top: 40px;
+}
+.skills .container{
+    width: 80vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    position: relative;
+    left: 0;
+    margin-top: 0;
+}
+.skills .container .bar{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 20px;
+}
+.skills .container .bar .bar-content{
+    height: 100%;
+    background: #C55956;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 40px;
+    border-radius: 20px;
+}
+.portfolio .container{
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+.contact {
+    padding: 10px;
+}
+.contact .myHeader{
+    margin: 30px 0 50px 0;
+}
+.project-layout{
+
+    opacity: 0.5;
+}
+
+.project-title{
+
+    height: 20%;
+}
+}
