@@ -736,8 +736,8 @@ a{
     grid-template-columns: 1fr;
     gap: 20px;
 }
-.contact {
-    padding: 10px;
+.contact, .portfolio, .about, .skills {
+    padding-top: 50px;
 }
 .contact .myHeader{
     margin: 30px 0 50px 0;
